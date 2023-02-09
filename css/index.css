@@ -1,13 +1,86 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+#section { font-family: 'Raleway', sans-serif; }
 #section .bg {
     background-image: url(../image/middle_bg.png);
-    background-repeat: no-repeat;
-    width:100%; height:100%;
-    background-size: cover;
     background-position:center;
-    position:absolute; top:0; left:0;
-    z-index:-1;
-    overflow: hidden;
-    /* display:none; */
+    height:100vh;
+    position:relative;
+    z-index: -1;
+}
+/* section main */
+#section .main {
+    position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+    width:1140px; height:auto;
+}
+
+/* section slidebox */
+#section .main .slidebox { float:left; width:456px; height:456px;}
+#section .main .slidebox .slidein {
+    position:relative; 
+}
+#section .main .slidebox .slidein .slide{
+    background-size:cover;
+    background-position:center;
+    width:456px; height:456px;
+}
+#section .main .slidebox .slidein .slide1 {
+    background-image:url(../image/main_visual1.jpg);
+}
+#section .main .slidebox .slidein .slide2 {
+    background-image:url(../image/main_visual2.jpg);
+}
+#section .main .slidebox .slidein .slide3 {
+    background-image:url(../image/main_visual3.jpg);
+}
+#section .main .slidebox .slick-arrow {
+    border:none;
+    width:40px; height:40px;
+    opacity:0.8;
+    z-index:99999;
+    font-size:0;
+}
+#section .main .slidebox .slick-arrow:hover { opacity:1; }
+#section .main .slidebox .slick-prev {
+    background-image: url(../image/arrow_01.jpg);
+    transform: translate(0, 496px);
+}
+#section .main .slidebox .slick-next {
+    background-image: url(../image/arrow_02.jpg);
+    transform:translate(40px, 0);
+}
+#section .main .slidebox .slidein .slide {
+    padding:60px 30px;
+    color:#fff; font-size:12px; line-height: 1.75em;
+    float:left;
+}
+#section .main .slidebox .slidein .slide span{
+    font-size:40px; color: #86b8ea;
+}
+/* section cont */
+#section .main .cont {
+    position:absolute; top:0; left:456px;
+    display:block;
+    width:684px; height:684px;
+    background-size:cover;
+    background-position:center;
+}
+#section .main .cont ul li { width:33.33%; height:33.33%; }
+#section .main .cont ul li:nth-child(1) {
+    background-image: url(../image/01_box.png);
+}
+#section .main .cont ul li:nth-child(2) {
+    background-image: url(../image/03_box.png);
+}
+#section .main .cont ul li:nth-child(3) {
+    background-image: url(../image/02_box.png);
+}
+#section .main .cont ul li:nth-child(4) {
+    background-image: url(../image/wlogo.png);
+}
+#section .main .cont ul li:nth-child(5) {
+    background-image: url(../image/06_box1.png);
 }
