@@ -10,7 +10,7 @@
     position:fixed; top:0; left:0; 
     color:#c3c3c3;
     font-family: 'Raleway', sans-serif;
-    /* z-index: 99999; */
+    z-index: 99999;
 }
 #header h1 {  text-align:center; padding:70px 0;  }
 #header h1 a {
@@ -102,3 +102,22 @@
     line-height: 1.5em;
 }
 #header .info span { font-weight: bold; letter-spacing: -1px;}
+/* header viewall */
+#header .viewall ul{
+    background:#000; border-radius: 50px;
+    color:#fff; font-size:50px; text-align: center; line-height:50px;
+    width:50px; height:50px;
+    position:fixed; bottom:50px; left: 250px;
+    transition:all 0.3s;
+    overflow:hidden;
+}
+#header .viewall ul li:last-child {
+    display:none; 
+    font-size:14px;
+}
+#header .viewall:hover ul {
+    background:#21bbb1; border-radius: 50px;
+    width:200px; height:50px;
+}
+#header .viewall:hover li:first-child { display:none; }
+#header .viewall:hover li:last-child { display:block; }

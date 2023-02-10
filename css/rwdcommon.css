@@ -75,6 +75,8 @@
         padding-top:60px; 
         transition:all 0.5s; 
         overflow-y:auto;
+        z-index:9999;
+        overflow: hidden;
     }
     #header #nav.on {
         right:0;
@@ -84,7 +86,6 @@
         border:0px dotted #343434;
         border-top:1px solid #444;
         border-bottom:1px solid #444;
-        overflow: hidden;
         background:#1c1c1c;
     }
     #header .sign a {
@@ -103,6 +104,7 @@
         font-size:15px; text-align: left; font-weight: bold;
         padding:20px 30px; 
         border-bottom: 1px solid rgb(51, 51, 51);
+        transition:all 0.3s;
     }
     #header #nav .depth1 > li > a:hover {
         background:none;
@@ -116,16 +118,16 @@
         margin-top:0px; 
         display:none; 
     }
-    #header #nav .depth1 > li.on .depth2 {
+    /* #header #nav .depth1 > li.on .depth2 {
         left:100%; 
         opacity:1; z-index:9999; 
-        transition:left 0.05s, opacity 0.1s, z-index 0.2s;
-    }
+        transition:all 0.1s;
+    } */
     #header #nav .depth1 .depth2 li a {
         display:block;
         padding:12px 20px 12px 30px;
         border-bottom: 1px solid #3f3f3f;
-        transition:all 0.1s;
+        transition:all 0.3s;
     }
 
     #header #nav .depth1 > li .depth2 li:hover a {
