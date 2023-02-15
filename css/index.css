@@ -3,17 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 /* font-family: 'Raleway', sans-serif; */
 
-#section { font-family: 'Raleway', sans-serif; }
+#section { font-family: 'Raleway', sans-serif;
+    width:100%;
+    position:relative;
+}
 #section .bg {
     background-image: url(../image/middle_bg.png);
     background-position:center;
-    height:100vh;
-    position:relative;
+    background-size:auto;
+    background-repeat: no-repeat;
+    height:100vh; width:100%;
+    position:absolute; top:0; left:0;
     z-index: -1;
 }
 /* section main */
 #section .main {
-    position:absolute; top:30%; left:300px; transform:translate(0, -30%);
+    position:relative; top:0; left:50%; transform:translate(-50%, 100px);
+    width:1140px;
 }
 
 /* section slidebox */
@@ -24,7 +30,7 @@
 #section .main .slidebox .slidein .slide{
     background-size:cover;
     background-position:center;
-    width:456px; height:456px;
+    width:33.33%; height:456px;
 }
 #section .main .slidebox .slidein .slide1 {
     background-image:url(../image/main_visual1.jpg);
@@ -45,11 +51,11 @@
 #section .main .slidebox .slick-arrow:hover { opacity:1; }
 #section .main .slidebox .slick-prev {
     background-image: url(../image/arrow_01.jpg);
-    position:absolute; top: 456px; left:0;
+    position:absolute; top:100%; left:0;
 }
 #section .main .slidebox .slick-next {
     background-image: url(../image/arrow_02.jpg);
-    transform:translate(40px, 0);
+    position:absolute; top:100%; left:40px;
 }
 #section .main .slidebox .slidein .slide {
     padding:60px 30px;
@@ -61,7 +67,6 @@
 }
 /* section cont */
 #section .main .cont {
-    position:absolute; top:0; left:456px;
     width:684px; height:684px;
     float:left;
 }
@@ -70,18 +75,15 @@
     float:left;
     overflow:hidden;
 }
-#section .main .cont .boxbg:last-child {
-    width:100%;
-    background-color:rgba(255, 255, 255, 0.8);
-}
-#section .main .cont .boxbg li {
+
+#section .main .cont .boxbg li:last-child {
     background-size:cover;
     background-position:center;
     width:100%; height:100%;
     text-align: center; font-size:12px; color:#ccc;
     cursor:pointer;
 }
-#section .main .cont .boxbg li a {
+#section .main .cont .boxbg li:last-child a {
     background:rgba(0, 0, 0, 0.8);
     width:100%; height:100%;
     float:left;
@@ -91,7 +93,7 @@
 #section .main .cont .boxbg li:hover a {
     transform:translate(0, 0);
 }
-#section .main .cont .boxbg li a > div { 
+#section .main .cont .boxbg li:last-child a > div { 
     line-height: 2em;
     letter-spacing: -1px;
     padding-top:35%;
@@ -124,16 +126,24 @@
     background-image: url(../image/06_box1.png);
     background-color:rgba(61,61,61,0.8);
 }
-#section .main .cont .boxbg > div {
+#section .main .cont .boxbg:nth-child(6) li:first-child {
     padding:30px 20px;
     line-height:1.5em; font-size:18px; color:#555;
+    text-align: left;
 }
-#section .main .cont .boxbg > div a {
+#section .main .cont .boxbg:nth-child(6) > li:first-child a {
     font-size:12px; color:#333;
 }
-#section .main .cont .boxbg:nth-child(6) > li {
+#section .main .cont .boxbg:nth-child(6) {
+    width:66.66%;
+    background-color:rgba(255, 255, 255, 0.8);
+    position:relative;
+    overflow:visible;
+}
+#section .main .cont .boxbg:nth-child(6) > li:last-child {
     background-image: url(../image/08_box.png);
-    width:33.33%; height:33.33%; 
-    position:absolute; top:66.66%; right:0;
+    background-color:rgba(255, 255, 255, 0.8);
+    width:50%; height:100%; 
+    position:absolute; top:0; left:100%;
     overflow:hidden;
 }

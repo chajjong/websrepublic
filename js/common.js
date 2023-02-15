@@ -1,5 +1,5 @@
 var ww = $(window).width()
-if (ww>950) {
+if (ww>1180) {
     $('html').addClass('pc')
 } else {
     $('html').addClass('mobile')

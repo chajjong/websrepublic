@@ -2,15 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 /* font-family: 'Raleway', sans-serif; */
-
+body {font-family: 'Raleway', sans-serif; overflow-x:hidden; }
 /* header */
 #header {
     width:200px; height:100%;
     background:rgb(26, 26, 26);
     position:fixed; top:0; left:0; 
     color:#c3c3c3;
-    font-family: 'Raleway', sans-serif;
-    z-index: 99999;
+    z-index: 9999;
 }
 #header h1 {  text-align:center; padding:70px 0;  }
 #header h1 a {
@@ -37,37 +36,39 @@
 
 /* header nav */
 #header .navopen { display:none }
-#header #nav .depth1 { margin:20px 0 }
-#header #nav .depth1 > li { position:relative; }
+#header #nav .depth1 { margin:20px 0; position:relative; z-index:999;}
+#header #nav .depth1 > li { position:relative; overflow:hidden; }
 #header #nav .depth1 > li > a {
     display:block; 
     font-size:15px; text-align: right; font-weight: bold;
-    padding:16px 30px; 
+    padding:16px 30px;
+    width:200px;
 }
-#header #nav .depth1 > li > a:hover {
+#header #nav .depth1 > li:hover > a {
     background:#000;
     color:#86b8ea;
 }
 #header #nav .depth1 > li .depth2 {
     position:absolute; top:0; left:90%;
-    /* background:rgba(17, 17, 17, 0.8); */
     width:140px;
-    display:none;
+    opacity:0;
     font-size:13px;
     margin-top:10px; 
-    transition:all 0.5s;
-    z-index:99;
+    transition:all 0s 0s;
+    z-index:-9999;
 }
 #header #nav .depth1 > li.on .depth2 {
-    left:100%; 
-    display:block; z-index:9999;
-    transition:all 0.5s;
+    left:100%;
+    z-index:99;
+    opacity:1;
+    transition:all 0.3s;
+    width:140px;
 }
 #header #nav .depth1 .depth2 li a {
     display:block;
     padding:10px 20px;
 }
-
+#header #nav .depth1:hover > li {overflow:visible;}
 #header #nav .depth1 > li .depth2 li:hover a {
     background:#000;
     color:#86b8ea;
@@ -75,6 +76,7 @@
 #header .decobox { position:absolute; top:0; left:100%; width:0px; height:100%; 
     background:rgba(17, 17, 17, 0.8); transition:all 0.1s}
 #header .decobox.on { width:140px; }
+
 
 /* header contact */
 #header .contact {
@@ -93,23 +95,16 @@
     font-size:12px;
     padding:35.5px 20px;
 }
-/* header info */
-#header .info {
-    position:absolute; bottom:30px; right:20px;
-    text-align: right;
-    font-size:11px;
-    color:#777;
-    line-height: 1.5em;
-}
-#header .info span { font-weight: bold; letter-spacing: -1px;}
 /* header viewall */
-#header .viewall ul{
+
+#header .viewall ul {
     background:#000; border-radius: 50px;
     color:#fff; font-size:50px; text-align: center; line-height:50px;
     width:50px; height:50px;
     position:fixed; bottom:50px; left: 250px;
     transition:all 0.3s;
     overflow:hidden;
+    z-index:9999999;
 }
 #header .viewall ul li:last-child {
     display:none; 
@@ -121,3 +116,18 @@
 }
 #header .viewall:hover li:first-child { display:none; }
 #header .viewall:hover li:last-child { display:block; }
+
+/* footer info */
+#footer { 
+    position:relative;
+    color:#777;
+    font-size:11px;
+    line-height: 1.5em;
+}
+#footer .info {
+    position:fixed; bottom:30px; left:35px;
+    text-align: right;
+    z-index:9999;
+}
+#footer .inforwd {display:none;}
+#footer span { font-weight: bold; letter-spacing: -1px;}
