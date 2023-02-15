@@ -148,7 +148,7 @@
     /* footer info */
     #footer .info {display:none;}
     #footer .inforwd {
-        display:block;
+        display:inline-block;
         /* position: absolute; bottom: 0;left: 0; */
         background: rgb(26, 26, 26);
         width: 100vw;

@@ -119,7 +119,7 @@ body {font-family: 'Raleway', sans-serif; overflow-x:hidden; }
 
 /* footer info */
 #footer { 
-    position:relative;
+    /* position:relative; */
     color:#777;
     font-size:11px;
     line-height: 1.5em;
